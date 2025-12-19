@@ -233,33 +233,33 @@ Place new files inside the <code>images/</code> folder and update filenames here
 <table align="center">
 <tr>
     <td align="center" width="50%">
-        <img src="images/image1.png" height="350px">
+        <img src="images/screen1.png" height="350px">
         <p><b>Image 1</b></p>
     </td>
     <td align="center" width="50%">
-        <img src="images/image2.png" height="350px">
+        <img src="images/screen2.png" height="350px">
         <p><b>Image 2</b></p>
     </td>
 </tr>
 
 <tr>
     <td align="center" width="50%">
-        <img src="images/image3.png" height="350px">
+        <img src="images/screen3.png" height="350px">
         <p><b>Image 3</b></p>
     </td>
     <td align="center" width="50%">
-        <img src="images/image4.png" height="350px">
+        <img src="images/screen4.png" height="350px">
         <p><b>Image 4</b></p>
     </td>
 </tr>
 
 <tr>
     <td align="center" width="50%">
-        <img src="images/image5.png" height="350px">
+        <img src="images/screen5.png" height="350px">
         <p><b>Image 5</b></p>
     </td>
     <td align="center" width="50%">
-        <img src="images/image6.png" height="350px">
+        <img src="images/screen6.png" height="350px">
         <p><b>Image 6</b></p>
     </td>
 </tr>
