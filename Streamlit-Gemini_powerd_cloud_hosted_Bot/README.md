@@ -223,37 +223,50 @@ http://EC2-PUBLIC-IP:8501
 </pre>
 
 <hr>
-<h2 align="center">🌐 Application Screenshots</h2>
+<h2 align="center">📸 Project Image Gallery</h2>
 
 <p align="center">
-Below are three preview images of the deployed application interface, showing
-Streamlit UI, email automation dashboard, and Gemini-powered output layout.
+All screenshots and UI previews related to the application are shown below.
+Place new files inside the <code>images/</code> folder and update filenames here.
 </p>
 
 <table align="center">
 <tr>
+    <td align="center" width="50%">
+        <img src="images/image1.png" height="350px">
+        <p><b>Image 1</b></p>
+    </td>
+    <td align="center" width="50%">
+        <img src="images/image2.png" height="350px">
+        <p><b>Image 2</b></p>
+    </td>
+</tr>
 
-<td align="center" width="33%">
-<img src="images/screen1.png" width="250px">
-<p><b>Streamlit Home UI</b></p>
-</td>
+<tr>
+    <td align="center" width="50%">
+        <img src="images/image3.png" height="350px">
+        <p><b>Image 3</b></p>
+    </td>
+    <td align="center" width="50%">
+        <img src="images/image4.png" height="350px">
+        <p><b>Image 4</b></p>
+    </td>
+</tr>
 
-<td align="center" width="33%">
-<img src="images/screen2.png" width="250px">
-<p><b>Live Email Processing</b></p>
-</td>
-
-<td align="center" width="33%">
-<img src="images/screen3.png" width="250px">
-<p><b>Gemini Output Email View</b></p>
-</td>
-
+<tr>
+    <td align="center" width="50%">
+        <img src="images/image5.png" height="350px">
+        <p><b>Image 5</b></p>
+    </td>
+    <td align="center" width="50%">
+        <img src="images/image6.png" height="350px">
+        <p><b>Image 6</b></p>
+    </td>
 </tr>
 </table>
 
-<p align="center">
-<i>To add images, place .png or .jpg files inside an <code>images/</code> folder and rename them as shown.</i>
-</p>
+<p align="center"><i>⚠️ Add or remove table rows depending on number of images you upload.</i></p>
+
 
 <h2 align="center">🎯 Final Result</h2>
 
