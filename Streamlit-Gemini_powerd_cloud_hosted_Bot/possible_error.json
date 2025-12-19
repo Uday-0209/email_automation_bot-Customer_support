@@ -1,0 +1,302 @@
+[
+  {
+    "issue_number": 10501,
+    "issue": "Vibration sensor X-axis signal lost, value static at 0",
+    "solution": "Check the cable continuity for the X-axis accelerometer. Tighten the connector at the DAQ port."
+  },
+  {
+    "issue_number": 10502,
+    "issue": "Vibration sensor Y-axis readings showing high noise floor",
+    "solution": "Inspect the sensor mounting for looseness. Ensure the shield wire is properly grounded to the machine chassis."
+  },
+  {
+    "issue_number": 10503,
+    "issue": "Z-axis accelerometer data clipping at maximum range",
+    "solution": "The machine vibration exceeds the sensor's g-range. Verify if the correct sensor sensitivity is configured in settings."
+  },
+  {
+    "issue_number": 20104,
+    "issue": "PT100 temperature sensor 1 showing negative value or open circuit",
+    "solution": "Check for a broken wire in the RTD cable or loose terminal block connection on the TMM module."
+  },
+  {
+    "issue_number": 20105,
+    "issue": "Temperature sensor 2 reading stuck at 850°C (Max Scale)",
+    "solution": "Possible short circuit in the sensor wires. Inspect the cable insulation for damage."
+  },
+  {
+    "issue_number": 20106,
+    "issue": "Hall effect current sensor giving non-zero reading when machine is off",
+    "solution": "Perform a zero-calibration in the software settings. Check for magnetic interference near the sensor."
+  },
+  {
+    "issue_number": 30201,
+    "issue": "DAQ ADC initialization failed on startup",
+    "solution": "Power cycle the device. If the issue persists, the ADC chip may be damaged."
+  },
+  {
+    "issue_number": 30202,
+    "issue": "Sampling rate mismatch detected",
+    "solution": "The configured sampling rate (e.g., 20kHz) is not supported by the current active channel count. Lower the sampling rate."
+  },
+  {
+    "issue_number": 30203,
+    "issue": "Buffer overflow - Data acquisition speed exceeds processing speed",
+    "solution": "Reduce the number of active channels or increase the buffer size in the configuration file."
+  },
+  {
+    "issue_number": 30204,
+    "issue": "FFT calculation error: Time domain data corrupted",
+    "solution": "Check for intermittent signal loss during the sampling window. Restart the edge processing service."
+  },
+  {
+    "issue_number": 40401,
+    "issue": "Wi-Fi module initialized but unable to obtain IP address",
+    "solution": "Check the DHCP server settings on the router. Verify the Wi-Fi password in the `wifi_config.json` file."
+  },
+  {
+    "issue_number": 40402,
+    "issue": "Ethernet link down despite cable connected",
+    "solution": "Try a different Ethernet cable. Ensure the switch port is active and not disabled."
+  },
+  {
+    "issue_number": 40403,
+    "issue": "MQTT Broker connection timeout",
+    "solution": "Ping the broker URL from the device. Check firewall rules allowing traffic on port 1883/8883."
+  },
+  {
+    "issue_number": 40404,
+    "issue": "Cloud sync failed: Authentication token expired",
+    "solution": "Regenerate the device token from the cloud dashboard and update it in the device settings."
+  },
+  {
+    "issue_number": 40405,
+    "issue": "Gateway reachable but no internet access",
+    "solution": "Check the DNS settings. Ensure the gateway has a valid WAN connection."
+  },
+  {
+    "issue_number": 50101,
+    "issue": "System low voltage warning detected (<22V)",
+    "solution": "Check the 24V DC power supply unit. Ensure the wiring gauge is sufficient for the distance."
+  },
+  {
+    "issue_number": 50102,
+    "issue": "Device CPU temperature critically high (>80°C)",
+    "solution": "Ensure the electrical cabinet fan is working. Check if the device heatsink is covered by dust."
+  },
+  {
+    "issue_number": 50103,
+    "issue": "SD Card write protection error",
+    "solution": "Eject the SD card and unlock the physical write-protect switch. Reinsert and reboot."
+  },
+  {
+    "issue_number": 50104,
+    "issue": "Local storage full: Unable to save CSV logs",
+    "solution": "Delete old log files or enable 'Auto-delete oldest' in the storage settings."
+  },
+  {
+    "issue_number": 60001,
+    "issue": "Modbus RS485 communication timeout with Energy Meter",
+    "solution": "Check the twisted pair wiring (A/B). Verify Baud rate and Slave ID match the meter configuration."
+  },
+  {
+    "issue_number": 60002,
+    "issue": "CRC error on Energy Meter data packet",
+    "solution": "Check for electrical noise on the RS485 line. Install a termination resistor (120Ω) if the cable is long."
+  },
+  {
+    "issue_number": 70101,
+    "issue": "Software service 'mtcm-core' stopped unexpectedly",
+    "solution": "Check the system logs (`/var/log/syslog`) for the crash reason. Restart the service manually."
+  },
+  {
+    "issue_number": 70102,
+    "issue": "Config file parsing error: invalid JSON format",
+    "solution": "Restore the default configuration file or use a JSON validator to fix syntax errors."
+  },
+  {
+    "issue_number": 70103,
+    "issue": "Firmware update failed: Checksum mismatch",
+    "solution": "Download the firmware file again. Ensure the connection is stable during upload."
+  },
+  {
+    "issue_number": 70104,
+    "issue": "Web dashboard not loading: Port 80/8080 busy",
+    "solution": "Another application might be using the port. Change the web server port in settings and restart."
+  },
+  {
+    "issue_number": 80901,
+    "issue": "RPM sensor pulse not detected",
+    "solution": "Adjust the proximity sensor gap. Clean the reflective tape if using an optical sensor."
+  },
+  {
+    "issue_number": 80902,
+    "issue": "Spindle load threshold exceeded constantly",
+    "solution": "Check if the threshold value is set too low for the current cutting process. Recalibrate the baseline."
+  },
+  {
+    "issue_number": 10504,
+    "issue": "Vibration sensor cable impedance too high",
+    "solution": "Possible corrosion on the connector pins. Clean with contact cleaner or replace the cable."
+  },
+  {
+    "issue_number": 20107,
+    "issue": "Ambient temperature sensor failure",
+    "solution": "The internal board sensor is malfunctioning. This may require a board replacement."
+  },
+  {
+    "issue_number": 30205,
+    "issue": "Trigger signal not received for data capture",
+    "solution": "Check the digital input (DI) wiring from the machine CNC controller (Cycle Start signal)."
+  },
+  {
+    "issue_number": 30206,
+    "issue": "IEPE sensor power supply fault",
+    "solution": "The internal constant current source (4mA) is not working. Check if the sensor requires external power."
+  },
+  {
+    "issue_number": 40406,
+    "issue": "4G/LTE Module SIM card not detected",
+    "solution": "Power off, remove the SIM card, clean the contacts, and reinsert it firmly."
+  },
+  {
+    "issue_number": 40407,
+    "issue": "Weak Wi-Fi signal strength (RSSI < -80dBm)",
+    "solution": "Install an external Wi-Fi antenna or move the device closer to the access point."
+  },
+  {
+    "issue_number": 50105,
+    "issue": "RTC (Real Time Clock) battery low, time lost on reboot",
+    "solution": "Replace the CR2032 coin cell battery on the mainboard to retain system time."
+  },
+  {
+    "issue_number": 50106,
+    "issue": "USB Drive not recognized for data export",
+    "solution": "Format the USB drive to FAT32. NTFS is often not supported by embedded Linux devices."
+  },
+  {
+    "issue_number": 60003,
+    "issue": "Energy meter Voltage phase sequence error",
+    "solution": "Swap the L1 and L3 voltage sensing wires to correct the phase rotation."
+  },
+  {
+    "issue_number": 60004,
+    "issue": "Power factor reading is NaN or invalid",
+    "solution": "Current flow is too low to calculate Power Factor. Ensure the machine is under load."
+  },
+  {
+    "issue_number": 70105,
+    "issue": "Database lock file error",
+    "solution": "The internal SQLite database is locked. Reboot the device to clear the lock file."
+  },
+  {
+    "issue_number": 70106,
+    "issue": "Edge analytics engine unresponsive",
+    "solution": "The processing thread is hung. Restart the device. If frequent, check CPU usage statistics."
+  },
+  {
+    "issue_number": 80903,
+    "issue": "Chatter detection false positive",
+    "solution": "Increase the chatter threshold. Review the frequency band settings for the specific tool."
+  },
+  {
+    "issue_number": 80904,
+    "issue": "Machine status 'Idle' despite vibration present",
+    "solution": "Adjust the 'Machine On' vibration threshold. It is currently set higher than the idle vibration."
+  },
+  {
+    "issue_number": 10505,
+    "issue": "Cross-talk detected between Channel 1 and Channel 2",
+    "solution": "Separate the signal cables. Ensure analog cables are not running parallel to high-voltage power lines."
+  },
+  {
+    "issue_number": 20108,
+    "issue": "Coolant temperature sensor fluctuating rapidly",
+    "solution": "Check for loose wiring or moisture ingress in the sensor connector."
+  },
+  {
+    "issue_number": 30207,
+    "issue": "ADC reference voltage unstable",
+    "solution": "Power supply ripple is too high. Use a regulated UPS or noise filter for the power input."
+  },
+  {
+    "issue_number": 40408,
+    "issue": "Device IP conflict detected on network",
+    "solution": "Another device has the same static IP. Change the device IP or switch to DHCP."
+  },
+  {
+    "issue_number": 40409,
+    "issue": "SSH access denied",
+    "solution": "Verify the SSH keys or password. Ensure SSH is enabled in the admin panel."
+  },
+  {
+    "issue_number": 50107,
+    "issue": "LED status indicators not working",
+    "solution": "Check the ribbon cable connecting the LED panel to the mainboard."
+  },
+  {
+    "issue_number": 60005,
+    "issue": "Modbus Exception Code 02 (Illegal Data Address)",
+    "solution": "The requested register address does not exist in the Energy Meter map. Update the Modbus map."
+  },
+  {
+    "issue_number": 70107,
+    "issue": "License key invalid or expired",
+    "solution": "Contact support to renew the license. Upload the new `license.key` file."
+  },
+  {
+    "issue_number": 80905,
+    "issue": "Tool wear index calculation failed",
+    "solution": "Insufficient historical data to calculate wear. Run the machine for at least 10 cycles to build a baseline."
+  },
+  {
+    "issue_number": 90001,
+    "issue": "Analog Output 4-20mA loop open",
+    "solution": "Check the wiring to the PLC analog input. Ensure the loop is powered."
+  },
+  {
+    "issue_number": 90002,
+    "issue": "Digital Output relay stuck closed",
+    "solution": "Tap the relay lightly. If it remains stuck, the relay contact might be welded; replace the module."
+  },
+  {
+    "issue_number": 10506,
+    "issue": "Accelerometer bias voltage out of spec",
+    "solution": "The sensor might be damaged due to shock/drop. Replace the accelerometer."
+  },
+  {
+    "issue_number": 20109,
+    "issue": "Temperature hysteresis loop error",
+    "solution": "The software debounce setting for the alarm is too high. Lower the hysteresis value."
+  },
+  {
+    "issue_number": 30208,
+    "issue": "Data packet loss during high-speed streaming",
+    "solution": "Network bandwidth is insufficient. Switch from Wi-Fi to Ethernet or reduce the data rate."
+  },
+  {
+    "issue_number": 40410,
+    "issue": "NTP time sync failed",
+    "solution": "The device cannot reach the time server. Check internet access or specify a local NTP server IP."
+  },
+  {
+    "issue_number": 50108,
+    "issue": "Watchdog timer reset occurred",
+    "solution": "The system was unresponsive and rebooted automatically. Monitor for recurring freeze patterns."
+  },
+  {
+    "issue_number": 60006,
+    "issue": "Energy consumption spike detected (Surge)",
+    "solution": "Check the machine for mechanical jamming or motor stalling events."
+  },
+  {
+    "issue_number": 70108,
+    "issue": "User login failed: Max attempts exceeded",
+    "solution": "Wait for 15 minutes for the lockout to clear or reset the admin password using the physical reset button."
+  },
+  {
+    "issue_number": 80906,
+    "issue": "Anomaly score 100% (Critical Failure Imminent)",
+    "solution": "Immediate inspection required. Vibration levels are significantly above the trained model's safe zone."
+  }
+]
