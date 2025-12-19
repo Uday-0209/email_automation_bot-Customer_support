@@ -1,15 +1,4 @@
-# import subprocess
 
-# prompt = 'generate the mail of response for techsupport'
-
-# result = subprocess.run(
-#     ['ollama','run','llama3.2:3b'],
-#     input = prompt,
-#     text = True,
-#     capture_output = True
-# )
-
-# print(result.stdout)
 
 import subprocess
 import sys
@@ -17,26 +6,6 @@ import re
 from tqdm import tqdm
 import pandas as pd
 
-# input1 = input('enter the value:')
-
-# process = subprocess.Popen(
-#     ['ollama', 'run', 'llama3.2:3b'],
-#     stdin=subprocess.PIPE,
-#     stdout=subprocess.PIPE,
-#     text=True
-# )
-# issue1 = '101 : the daq is not workng might be wire might be loose'
-# issue2 = '102 : the daq is not acquiring vibration correctly'
-# issue3 = '103 : the sensor is connected , daq also on, but data is not coming'
-# issue4 = '104 : unable to turn on the software, once we open software it closes automatically'
-
-# prompt = f"consider yourself as techsupport guy and here are some possible problems that suppose to choose one among issue and revert back, so the the issues are {issue1}, {issue2}, {issue3} and {issue4}. consider the input value and give the output, here is input {input1} value, generate the final output as email"
-
-# process.stdin.write(prompt)
-# process.stdin.close()     # IMPORTANT — tells ollama you're done sending input
-
-# for line in process.stdout:
-#     print(line, end="")
 class run_generator:
     @staticmethod
     def ensure_llm(model):
@@ -113,13 +82,7 @@ class run_generator:
             stdout=subprocess.PIPE,
             text=True
         )
-        # issue1 = '101 : the daq is not workng might be wire might be loose'
-        # issue2 = '102 : the daq is not acquiring vibration correctly'
-        # issue3 = '103 : the sensor is connected , daq also on, but data is not coming'
-        # issue4 = '104 : unable to turn on the software, once we open software it closes automatically'
         
-        # prompt = f"consider yourself as techsupport guy and here are some possible problems that suppose to choose one among issue and revert back, so the the issues are {issue1}, {issue2}, {issue3} and {issue4}. consider the input value and give the output, here is input {issue_value} value, generate the final output as email, generate in 100 words"
-
         template = '''
         Dear customer,
 
