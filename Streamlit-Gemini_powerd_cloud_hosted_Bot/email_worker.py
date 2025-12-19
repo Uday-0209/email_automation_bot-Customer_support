@@ -1,0 +1,640 @@
+# import base64
+# import os
+# import re
+# import threading
+# import time
+
+# from google.auth.transport.requests import Request
+# from google.oauth2.credentials import Credentials
+# from google_auth_oauthlib.flow import InstalledAppFlow
+# from googleapiclient.discovery import build
+
+# from email_generator import send_email
+# from gemini_llm_response import run_generator
+
+# # ----- SCOPES & GLOBALS (from main.py) -----
+# SCOPES_send = ["https://www.googleapis.com/auth/gmail.send"]
+# SCOPES_read = ["https://www.googleapis.com/auth/gmail.readonly"]
+
+# seen_ids = set()          # to avoid processing the same mail again
+# worker_running = False    # flag to control loop
+# log_callback = None       # function provided by Streamlit to display logs
+
+
+# # ========== Logging helper ==========
+# def log(msg: str):
+#     """Log to console AND to Streamlit (if callback is set)."""
+#     log(msg)
+#     if log_callback:
+#         log_callback(msg)
+
+
+# # ========== Helpers copied from main.py ==========
+
+# def get_clean_text(body: str) -> str:
+#     # remove URLs
+#     body = re.sub(r'https?://\S+', '', body)
+#     # remove HTML tags
+#     body = re.sub(r'<.*?>', '', body)
+#     # remove extra spaces
+#     body = re.sub(r'\s+', ' ', body).strip()
+#     return body
+
+
+# def get_email_body(msg) -> str:
+#     payload = msg.get("payload", {})
+
+#     # If multiple parts
+#     parts = payload.get("parts")
+#     if parts:
+#         for part in parts:
+#             mime_type = part.get("mimeType")
+#             data = part.get("body", {}).get("data")
+
+#             if data:
+#                 decoded = base64.urlsafe_b64decode(data).decode("utf-8", errors="ignore")
+
+#                 if mime_type == "text/plain":
+#                     return decoded
+#                 if mime_type == "text/html":
+#                     return decoded
+
+#     # Single-part email
+#     data = payload.get("body", {}).get("data")
+#     if data:
+#         return base64.urlsafe_b64decode(data).decode("utf-8", errors="ignore")
+
+#     return "(No body found)"
+
+
+# KEYWORDS = [
+#     "support",
+#     "tech support",
+#     "error",
+#     "not working",
+#     "assistance",
+#     "issue",
+#     "Not working"
+# ]
+
+
+# def subject_matches(subject: str) -> bool:
+#     subject_lower = subject.lower()
+#     return any(keyword in subject_lower for keyword in KEYWORDS)
+
+
+# PURCHASE_SPAM_KEYWORDS = [
+#     "order",
+#     "purchased",
+#     "purchase",
+#     "invoice",
+#     "receipt",
+#     "payment",
+#     "subscription",
+#     "discount",
+#     "offer",
+#     "save",
+#     "sale",
+#     "deal",
+#     "promo",
+#     "amazon",
+#     "flipkart",
+#     "myntra",
+#     "ajio",
+#     "ebay",
+#     "shop",
+#     "shipment",
+#     "delivered",
+#     "delivery",
+# ]
+
+
+# def is_purchase_or_spam(subject: str, sender: str, body: str) -> bool:
+#     text = (subject + " " + sender + " " + body).lower()
+#     return any(word in text for word in PURCHASE_SPAM_KEYWORDS)
+
+
+# def process_new_message(service, msg_id):
+#     """Read one message and extract sender, subject, cleaned body – or return None."""
+#     msg = service.users().messages().get(
+#         userId="me",
+#         id=msg_id,
+#         format="full"
+#     ).execute()
+
+#     headers = msg.get("payload", {}).get("headers", [])
+#     sender = subject = "(unknown)"
+
+#     for h in headers:
+#         if h["name"] == "From":
+#             sender = h["value"]
+#         if h["name"] == "Subject":
+#             subject = h["value"]
+
+#     raw_body = get_email_body(msg)
+
+#     # 1. Check if subject matches technical keywords
+#     if not subject_matches(subject):
+#         log(f"Skipping (Not tech-related): {subject}")
+#         return None
+
+#     # 2. Skip purchase/spam/marketing mails
+#     if is_purchase_or_spam(subject, sender, raw_body):
+#         log(f"Skipping (Purchase/Spam): {subject}")
+#         return None
+
+#     # 3. Clean body text
+#     body = get_clean_text(raw_body)
+
+#     log("========== TECH ALERT EMAIL ==========")
+#     log(f"From: {sender}")
+#     log(f"Subject: {subject}")
+#     log(f"Body: {body}")
+#     log("======================================")
+
+#     return [sender, subject, body]
+
+
+# def error_code_getter(body: str):
+#     pattern = r'[A-Za-z]+\s*[:\- ]\s*(\d+)'
+#     match = re.search(pattern, body)
+#     if match:
+#         return match.group(1)
+#     return None
+
+
+# # ========== Authentication (from main.py) ==========
+
+# def authenticate():
+#     """Authenticate for read and send using token JSON + credentials.json, just like main.py."""
+#     creds_read = None
+#     creds_send = None
+
+#     if os.path.exists('token_read.json'):
+#         creds_read = Credentials.from_authorized_user_file('token_read.json', SCOPES_read)
+
+#     if not creds_read or not creds_read.valid:
+#         if creds_read and creds_read.expired and creds_read.refresh_token:
+#             creds_read.refresh(Request())
+#         else:
+#             flow = InstalledAppFlow.from_client_secrets_file(
+#                 "credentials.json", SCOPES_read
+#             )
+#             creds_read = flow.run_local_server(port=0)
+
+#         with open("token_read.json", "w") as f:
+#             f.write(creds_read.to_json())
+
+#     if os.path.exists('token_send.json'):
+#         creds_send = Credentials.from_authorized_user_file('token_send.json', SCOPES_send)
+
+#     if not creds_send or not creds_send.valid:
+#         if creds_send and creds_send.expired and creds_send.refresh_token:
+#             creds_send.refresh(Request())
+#         else:
+#             flow = InstalledAppFlow.from_client_secrets_file(
+#                 "credentials.json", SCOPES_send
+#             )
+#             creds_send = flow.run_local_server(port=1)
+
+#         with open("token_send.json", "w") as f:
+#             f.write(creds_send.to_json())
+
+#     return [creds_read, creds_send]
+
+
+# # ========== Worker loop (main.py → threaded) ==========
+
+# def worker_loop(poll_interval: int):
+#     """
+#     This is the threaded version of main().
+#     It runs until worker_running is set to False.
+#     """
+#     global worker_running
+
+#     log("Authenticating Gmail services...")
+#     try:
+#         creds = authenticate()
+#         service_read = build("gmail", "v1", credentials=creds[0])
+#         service_send = build("gmail", "v1", credentials=creds[1])
+#     except Exception as e:
+#         log(f"❌ Authentication failed: {e}")
+#         worker_running = False
+#         return
+
+#     log(f"Monitoring Gmail... (checking every {poll_interval} seconds)")
+#     log("Press STOP in UI to stop.\n")
+
+#     while worker_running:
+#         try:
+#             # list unread emails
+#             results = service_read.users().messages().list(
+#                 userId="me",
+#                 q="is:unread",
+#                 maxResults=2
+#             ).execute()
+
+#             messages = results.get("messages", [])
+
+#             for m in messages:
+#                 msg_id = m["id"]
+
+#                 if msg_id in seen_ids:
+#                     continue
+
+#                 seen_ids.add(msg_id)
+#                 log("\nNew message getting processed.......")
+
+#                 output = process_new_message(service_read, msg_id)
+#                 if output is not None:
+#                     log("Extracting sender, subject and body details")
+#                     Sender = output[0]
+#                     Subject = output[1]
+#                     Body = output[2]
+
+#                     log("Extracting the error code from email body")
+#                     k = error_code_getter(Body)
+#                     if k is None:
+#                         log("No valid error code found. Skipping email.")
+#                         continue
+
+#                     log("The reply email is generating via Gemini")
+#                     mail = run_generator.generate_email(int(k))
+
+#                     # log("Sending Email.....")
+#                     # send_email(service_send, Sender, 'Reply for error', mail)
+#                     # log("✅ Successfully email sent to the customer")
+#                     log("📤 Sending email...")
+
+#                     send_email(service_send, Sender, 'Reply for error', mail)
+                    
+#                     log(f"""
+#                     📨 **Email Sent Successfully**
+#                     - **To:** {Sender}
+#                     - **Subject:** Reply for error
+#                     - **Error Code:** {k}
+#                     - **Time:** {time.strftime('%Y-%m-%d %H:%M:%S')}
+#                     """)
+
+
+#         except Exception as e:
+#             log(f"⚠️ Error in worker loop: {e}")
+
+#         time.sleep(poll_interval)
+
+#     log("🛑 Worker loop stopped.")
+
+
+# # ========== Public API for Streamlit ==========
+
+# def start_worker(poll_interval: int, logger=None):
+#     """
+#     Called from Streamlit to start the background worker.
+#     """
+#     global worker_running, log_callback
+
+#     if worker_running:
+#         # Already running
+#         if logger:
+#             logger("Worker already running.")
+#         return
+
+#     log_callback = logger
+#     worker_running = True
+
+#     t = threading.Thread(target=worker_loop, args=(poll_interval,), daemon=True)
+#     t.start()
+#     log("🚀 Worker thread started.")
+
+
+# def stop_worker():
+#     """
+#     Called from Streamlit to stop the background worker.
+#     """
+#     global worker_running
+#     if worker_running:
+#         worker_running = False
+#         log("⏹️ Stop signal sent to worker.")
+import base64
+import os
+import re
+import threading
+import time
+
+from google.auth.transport.requests import Request
+from google.oauth2.credentials import Credentials
+from google_auth_oauthlib.flow import InstalledAppFlow
+from googleapiclient.discovery import build
+
+from email_generator import send_email
+from gemini_llm_response import run_generator
+
+# Scopes
+SCOPES_send = ["https://www.googleapis.com/auth/gmail.send"]
+SCOPES_read = ["https://www.googleapis.com/auth/gmail.readonly"]
+
+# Globals
+seen_ids = set()
+worker_running = False
+log_callback = None
+
+
+# ============================================
+# LOGGING (THREAD-SAFE)
+# ============================================
+def log(msg: str):
+    """Logs to terminal AND safely queues for Streamlit."""
+    print(msg)  # Always print to console
+    if log_callback:
+        try:
+            # Use callback (which pushes to queue) - this is thread-safe
+            log_callback(msg)
+        except Exception as e:
+            print(f"[LOG ERROR] {e}")
+
+
+# ============================================
+# CLEANING + PROCESSING FUNCTIONS
+# ============================================
+def get_clean_text(body: str) -> str:
+    body = re.sub(r'https?://\S+', '', body)
+    body = re.sub(r'<.*?>', '', body)
+    body = re.sub(r'\s+', ' ', body).strip()
+    return body
+
+
+def get_email_body(msg):
+    payload = msg.get("payload", {})
+
+    if "parts" in payload:
+        for part in payload["parts"]:
+            mime = part.get("mimeType", "")
+            data = part.get("body", {}).get("data")
+
+            if data:
+                decoded = base64.urlsafe_b64decode(data).decode("utf-8", errors="ignore")
+                if mime in ("text/plain", "text/html"):
+                    return decoded
+
+    # Single part
+    data = payload.get("body", {}).get("data")
+    if data:
+        return base64.urlsafe_b64decode(data).decode("utf-8", errors="ignore")
+
+    return "(No body found)"
+
+
+KEYWORDS = [
+    "support",
+    "tech support",
+    "error",
+    "not working",
+    "assistance",
+]
+
+
+def subject_matches(subject: str) -> bool:
+    subject_lower = subject.lower()
+    return any(keyword in subject_lower for keyword in KEYWORDS)
+
+
+PURCHASE_SPAM_KEYWORDS = [
+    "order",
+    "purchased",
+    "purchase",
+    "invoice",
+    "receipt",
+    "payment",
+    "subscription",
+    "discount",
+    "promo",
+    "offer",
+    "delivered",
+]
+
+
+def is_purchase_or_spam(subject: str, sender: str, body: str) -> bool:
+    text = (subject + " " + sender + " " + body).lower()
+    return any(word in text for word in PURCHASE_SPAM_KEYWORDS)
+
+
+def process_new_message(service, msg_id):
+    msg = service.users().messages().get(userId="me", id=msg_id, format="full").execute()
+
+    headers = msg.get("payload", {}).get("headers", [])
+    sender = subject = "(unknown)"
+
+    for h in headers:
+        if h["name"] == "From":
+            sender = h["value"]
+        if h["name"] == "Subject":
+            subject = h["value"]
+
+    raw_body = get_email_body(msg)
+    body = get_clean_text(raw_body)
+
+    # Check conditions
+    if not subject_matches(subject):
+        log(f"⏭️ Skipping (Not tech-related): {subject}")
+        return None
+
+    if is_purchase_or_spam(subject, sender, body):
+        log(f"⏭️ Skipping (Purchase/Spam): {subject}")
+        return None
+
+    # Print details
+    log("=" * 50)
+    log("🚨 TECH SUPPORT EMAIL DETECTED")
+    log(f"📧 From: {sender}")
+    log(f"📋 Subject: {subject}")
+    log(f"💬 Body: {body[:200]}...")  # First 200 chars
+    log("=" * 50)
+
+    return [sender, subject, body]
+
+
+def error_code_getter(body: str):
+    pattern = r'[A-Za-z]+\s*[:\- ]\s*(\d+)'
+    match = re.search(pattern, body)
+    return match.group(1) if match else None
+
+
+# ============================================
+# AUTHENTICATION
+# ============================================
+def authenticate():
+    """Authenticate Gmail API with proper error handling."""
+    creds_read = None
+    creds_send = None
+    
+    if not os.path.exists("credentials.json"):
+        raise FileNotFoundError("credentials.json not found. Please upload it first.")
+    
+    # READ credentials
+    try:
+        if os.path.exists("token_read.json"):
+            log("📂 Loading token_read.json...")
+            creds_read = Credentials.from_authorized_user_file("token_read.json", SCOPES_read)
+
+        if not creds_read or not creds_read.valid:
+            if creds_read and creds_read.expired and creds_read.refresh_token:
+                log("🔄 Refreshing expired read token...")
+                creds_read.refresh(Request())
+                with open("token_read.json", "w") as f:
+                    f.write(creds_read.to_json())
+            else:
+                raise Exception("Valid token_read.json required. Run OAuth flow manually first.")
+    
+    except Exception as e:
+        log(f"❌ Error with read credentials: {e}")
+        raise
+
+    # SEND credentials
+    try:
+        if os.path.exists("token_send.json"):
+            log("📂 Loading token_send.json...")
+            creds_send = Credentials.from_authorized_user_file("token_send.json", SCOPES_send)
+
+        if not creds_send or not creds_send.valid:
+            if creds_send and creds_send.expired and creds_send.refresh_token:
+                log("🔄 Refreshing expired send token...")
+                creds_send.refresh(Request())
+                with open("token_send.json", "w") as f:
+                    f.write(creds_send.to_json())
+            else:
+                raise Exception("Valid token_send.json required. Run OAuth flow manually first.")
+    
+    except Exception as e:
+        log(f"❌ Error with send credentials: {e}")
+        raise
+
+    log("✅ Authentication successful!")
+    return [creds_read, creds_send]
+
+
+# ============================================
+# WORKER LOOP (BACKGROUND THREAD)
+# ============================================
+def worker_loop(poll_interval: int):
+    global worker_running
+
+    log("🔐 Authenticating Gmail services...")
+
+    try:
+        creds = authenticate()
+        service_read = build("gmail", "v1", credentials=creds[0])
+        service_send = build("gmail", "v1", credentials=creds[1])
+    except Exception as e:
+        log(f"❌ Authentication failed: {e}")
+        log("")
+        log("📋 Fix: Ensure all JSON files are uploaded and valid")
+        worker_running = False
+        return
+
+    log(f"✅ Gmail monitoring active (poll interval: {poll_interval}s)")
+    
+    # Signal to UI that worker is ready
+    if log_callback:
+        try:
+            log_callback("WORKER_READY_SIGNAL")
+        except:
+            pass
+
+    log("⏸️  Press STOP in UI to halt automation")
+    log("")
+
+    email_count = 0
+
+    while worker_running:
+        try:
+            results = service_read.users().messages().list(
+                userId="me", q="is:unread", maxResults=5
+            ).execute()
+
+            msgs = results.get("messages", [])
+
+            if not msgs:
+                # Reduced noise - only log occasionally
+                if email_count == 0:
+                    log("📭 No unread emails. Monitoring...")
+            
+            for item in msgs:
+                msg_id = item["id"]
+                if msg_id in seen_ids:
+                    continue
+
+                seen_ids.add(msg_id)
+                log("")
+                log("🔥 NEW MESSAGE DETECTED")
+
+                out = process_new_message(service_read, msg_id)
+                if out is None:
+                    continue
+
+                Sender, Subject, Body = out
+
+                log("🔍 Extracting error code from email body...")
+                err = error_code_getter(Body)
+
+                if err is None:
+                    log("⚠️ No valid error code found. Skipping this email.")
+                    continue
+
+                log(f"✅ Error code identified: {err}")
+                log("🤖 Generating AI-powered response via Gemini...")
+                
+                reply_msg = run_generator.generate_email(int(err))
+
+                log("📤 Sending automated reply...")
+                send_email(service_send, Sender, "Reply for error", reply_msg)
+
+                email_count += 1
+
+                log("")
+                log("=" * 50)
+                log("📨 EMAIL SENT SUCCESSFULLY")
+                log(f"   To: {Sender}")
+                log(f"   Subject: Reply for error")
+                log(f"   Error Code: {err}")
+                log(f"   Time: {time.strftime('%Y-%m-%d %H:%M:%S')}")
+                log(f"   Total Processed: {email_count}")
+                log("=" * 50)
+                log("")
+
+        except Exception as e:
+            log(f"⚠️ Worker error: {e}")
+
+        time.sleep(poll_interval)
+
+    log("🛑 Worker loop terminated.")
+
+
+# ============================================
+# CONTROL (CALLED FROM STREAMLIT)
+# ============================================
+def start_worker(poll_interval: int, logger=None):
+    """Start background worker thread."""
+    global worker_running, log_callback
+
+    if worker_running:
+        if logger:
+            logger("⚠️ Worker already running.")
+        return
+
+    log_callback = logger
+    worker_running = True
+
+    t = threading.Thread(target=worker_loop, args=(poll_interval,), daemon=True)
+    t.start()
+
+    log("🚀 Background worker thread started")
+
+
+def stop_worker():
+    """Stop background worker thread."""
+    global worker_running
+    if worker_running:
+        worker_running = False
+        log("🛑 Stop signal sent - worker will halt after current cycle")
+    else:
+        log("ℹ️ Worker is not currently running")
