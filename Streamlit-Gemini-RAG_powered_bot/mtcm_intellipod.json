@@ -1,0 +1,1658 @@
+[
+  {
+    "issue_number":100101,
+    "issue":"Analog Input Ch 1: Signal lost or static at 0V",
+    "solution":"Check cable continuity for Channel 1 sensor. Tighten the connector at the DAQ port.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100102,
+    "issue":"Analog Input Ch 1: Signal clipping at max range",
+    "solution":"Input voltage exceeds ±10V range. Check sensor sensitivity or gain settings for Channel 1.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100103,
+    "issue":"Analog Input Ch 1: High noise floor detected",
+    "solution":"Inspect shield grounding for Channel 1. Ensure cable is not running near high-voltage lines.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100104,
+    "issue":"Analog Input Ch 1: Bias voltage out of spec (IEPE)",
+    "solution":"Sensor open circuit or internal constant current source fault on Channel 1. Replace sensor.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100105,
+    "issue":"Analog Input Ch 1: Cross-talk from adjacent channel",
+    "solution":"Isolate the signal cable for Channel 1. Check for shared ground loops with Channel 2.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100201,
+    "issue":"Analog Input Ch 2: Signal lost or static at 0V",
+    "solution":"Check cable continuity for Channel 2 sensor. Tighten the connector at the DAQ port.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100202,
+    "issue":"Analog Input Ch 2: Signal clipping at max range",
+    "solution":"Input voltage exceeds ±10V range. Check sensor sensitivity or gain settings for Channel 2.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100203,
+    "issue":"Analog Input Ch 2: High noise floor detected",
+    "solution":"Inspect shield grounding for Channel 2. Ensure cable is not running near high-voltage lines.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100204,
+    "issue":"Analog Input Ch 2: Bias voltage out of spec (IEPE)",
+    "solution":"Sensor open circuit or internal constant current source fault on Channel 2. Replace sensor.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100205,
+    "issue":"Analog Input Ch 2: Cross-talk from adjacent channel",
+    "solution":"Isolate the signal cable for Channel 2. Check for shared ground loops with Channel 1\/3.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100301,
+    "issue":"Analog Input Ch 3: Signal lost or static at 0V",
+    "solution":"Check cable continuity for Channel 3 sensor. Tighten the connector at the DAQ port.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100302,
+    "issue":"Analog Input Ch 3: Signal clipping at max range",
+    "solution":"Input voltage exceeds ±10V range. Check sensor sensitivity or gain settings for Channel 3.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100303,
+    "issue":"Analog Input Ch 3: High noise floor detected",
+    "solution":"Inspect shield grounding for Channel 3. Ensure cable is not running near high-voltage lines.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100304,
+    "issue":"Analog Input Ch 3: Bias voltage out of spec (IEPE)",
+    "solution":"Sensor open circuit or internal constant current source fault on Channel 3. Replace sensor.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100305,
+    "issue":"Analog Input Ch 3: Cross-talk from adjacent channel",
+    "solution":"Isolate the signal cable for Channel 3. Check for shared ground loops with adjacent channels.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100401,
+    "issue":"Analog Input Ch 4: Signal lost or static at 0V",
+    "solution":"Check cable continuity for Channel 4 sensor. Tighten the connector at the DAQ port.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100402,
+    "issue":"Analog Input Ch 4: Signal clipping at max range",
+    "solution":"Input voltage exceeds ±10V range. Check sensor sensitivity or gain settings for Channel 4.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100403,
+    "issue":"Analog Input Ch 4: High noise floor detected",
+    "solution":"Inspect shield grounding for Channel 4. Ensure cable is not running near high-voltage lines.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100404,
+    "issue":"Analog Input Ch 4: Bias voltage out of spec (IEPE)",
+    "solution":"Sensor open circuit or internal constant current source fault on Channel 4. Replace sensor.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100405,
+    "issue":"Analog Input Ch 4: Cross-talk from adjacent channel",
+    "solution":"Isolate the signal cable for Channel 4. Check for shared ground loops with adjacent channels.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100501,
+    "issue":"Analog Input Ch 5: Signal lost or static at 0V",
+    "solution":"Check cable continuity for Channel 5 sensor. Tighten the connector at the DAQ port.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100502,
+    "issue":"Analog Input Ch 5: Signal clipping at max range",
+    "solution":"Input voltage exceeds ±10V range. Check sensor sensitivity or gain settings for Channel 5.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100503,
+    "issue":"Analog Input Ch 5: High noise floor detected",
+    "solution":"Inspect shield grounding for Channel 5. Ensure cable is not running near high-voltage lines.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100504,
+    "issue":"Analog Input Ch 5: Bias voltage out of spec (IEPE)",
+    "solution":"Sensor open circuit or internal constant current source fault on Channel 5. Replace sensor.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100505,
+    "issue":"Analog Input Ch 5: Cross-talk from adjacent channel",
+    "solution":"Isolate the signal cable for Channel 5. Check for shared ground loops with adjacent channels.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100601,
+    "issue":"Analog Input Ch 6: Signal lost or static at 0V",
+    "solution":"Check cable continuity for Channel 6 sensor. Tighten the connector at the DAQ port.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100602,
+    "issue":"Analog Input Ch 6: Signal clipping at max range",
+    "solution":"Input voltage exceeds ±10V range. Check sensor sensitivity or gain settings for Channel 6.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100603,
+    "issue":"Analog Input Ch 6: High noise floor detected",
+    "solution":"Inspect shield grounding for Channel 6. Ensure cable is not running near high-voltage lines.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100604,
+    "issue":"Analog Input Ch 6: Bias voltage out of spec (IEPE)",
+    "solution":"Sensor open circuit or internal constant current source fault on Channel 6. Replace sensor.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100605,
+    "issue":"Analog Input Ch 6: Cross-talk from adjacent channel",
+    "solution":"Isolate the signal cable for Channel 6. Check for shared ground loops with adjacent channels.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100701,
+    "issue":"Analog Input Ch 7: Signal lost or static at 0V",
+    "solution":"Check cable continuity for Channel 7 sensor. Tighten the connector at the DAQ port.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100702,
+    "issue":"Analog Input Ch 7: Signal clipping at max range",
+    "solution":"Input voltage exceeds ±10V range. Check sensor sensitivity or gain settings for Channel 7.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100703,
+    "issue":"Analog Input Ch 7: High noise floor detected",
+    "solution":"Inspect shield grounding for Channel 7. Ensure cable is not running near high-voltage lines.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100704,
+    "issue":"Analog Input Ch 7: Bias voltage out of spec (IEPE)",
+    "solution":"Sensor open circuit or internal constant current source fault on Channel 7. Replace sensor.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100705,
+    "issue":"Analog Input Ch 7: Cross-talk from adjacent channel",
+    "solution":"Isolate the signal cable for Channel 7. Check for shared ground loops with adjacent channels.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100801,
+    "issue":"Analog Input Ch 8: Signal lost or static at 0V",
+    "solution":"Check cable continuity for Channel 8 sensor. Tighten the connector at the DAQ port.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100802,
+    "issue":"Analog Input Ch 8: Signal clipping at max range",
+    "solution":"Input voltage exceeds ±10V range. Check sensor sensitivity or gain settings for Channel 8.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100803,
+    "issue":"Analog Input Ch 8: High noise floor detected",
+    "solution":"Inspect shield grounding for Channel 8. Ensure cable is not running near high-voltage lines.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100804,
+    "issue":"Analog Input Ch 8: Bias voltage out of spec (IEPE)",
+    "solution":"Sensor open circuit or internal constant current source fault on Channel 8. Replace sensor.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100805,
+    "issue":"Analog Input Ch 8: Cross-talk from adjacent channel",
+    "solution":"Isolate the signal cable for Channel 8. Check for shared ground loops with adjacent channels.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100901,
+    "issue":"Analog Input Ch 9: Signal lost or static at 0V",
+    "solution":"Check cable continuity for Channel 9 sensor. Tighten the connector at the DAQ port.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100902,
+    "issue":"Analog Input Ch 9: Signal clipping at max range",
+    "solution":"Input voltage exceeds ±10V range. Check sensor sensitivity or gain settings for Channel 9.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100903,
+    "issue":"Analog Input Ch 9: High noise floor detected",
+    "solution":"Inspect shield grounding for Channel 9. Ensure cable is not running near high-voltage lines.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100904,
+    "issue":"Analog Input Ch 9: Bias voltage out of spec (IEPE)",
+    "solution":"Sensor open circuit or internal constant current source fault on Channel 9. Replace sensor.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":100905,
+    "issue":"Analog Input Ch 9: Cross-talk from adjacent channel",
+    "solution":"Isolate the signal cable for Channel 9. Check for shared ground loops with adjacent channels.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101001,
+    "issue":"Analog Input Ch 10: Signal lost or static at 0V",
+    "solution":"Check cable continuity for Channel 10 sensor. Tighten the connector at the DAQ port.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101002,
+    "issue":"Analog Input Ch 10: Signal clipping at max range",
+    "solution":"Input voltage exceeds ±10V range. Check sensor sensitivity or gain settings for Channel 10.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101003,
+    "issue":"Analog Input Ch 10: High noise floor detected",
+    "solution":"Inspect shield grounding for Channel 10. Ensure cable is not running near high-voltage lines.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101004,
+    "issue":"Analog Input Ch 10: Bias voltage out of spec (IEPE)",
+    "solution":"Sensor open circuit or internal constant current source fault on Channel 10. Replace sensor.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101005,
+    "issue":"Analog Input Ch 10: Cross-talk from adjacent channel",
+    "solution":"Isolate the signal cable for Channel 10. Check for shared ground loops with adjacent channels.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101101,
+    "issue":"Analog Input Ch 11: Signal lost or static at 0V",
+    "solution":"Check cable continuity for Channel 11 sensor. Tighten the connector at the DAQ port.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101102,
+    "issue":"Analog Input Ch 11: Signal clipping at max range",
+    "solution":"Input voltage exceeds ±10V range. Check sensor sensitivity or gain settings for Channel 11.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101103,
+    "issue":"Analog Input Ch 11: High noise floor detected",
+    "solution":"Inspect shield grounding for Channel 11. Ensure cable is not running near high-voltage lines.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101104,
+    "issue":"Analog Input Ch 11: Bias voltage out of spec (IEPE)",
+    "solution":"Sensor open circuit or internal constant current source fault on Channel 11. Replace sensor.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101105,
+    "issue":"Analog Input Ch 11: Cross-talk from adjacent channel",
+    "solution":"Isolate the signal cable for Channel 11. Check for shared ground loops with adjacent channels.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101201,
+    "issue":"Analog Input Ch 12: Signal lost or static at 0V",
+    "solution":"Check cable continuity for Channel 12 sensor. Tighten the connector at the DAQ port.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101202,
+    "issue":"Analog Input Ch 12: Signal clipping at max range",
+    "solution":"Input voltage exceeds ±10V range. Check sensor sensitivity or gain settings for Channel 12.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101203,
+    "issue":"Analog Input Ch 12: High noise floor detected",
+    "solution":"Inspect shield grounding for Channel 12. Ensure cable is not running near high-voltage lines.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101204,
+    "issue":"Analog Input Ch 12: Bias voltage out of spec (IEPE)",
+    "solution":"Sensor open circuit or internal constant current source fault on Channel 12. Replace sensor.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101205,
+    "issue":"Analog Input Ch 12: Cross-talk from adjacent channel",
+    "solution":"Isolate the signal cable for Channel 12. Check for shared ground loops with adjacent channels.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101301,
+    "issue":"Analog Input Ch 13: Signal lost or static at 0V",
+    "solution":"Check cable continuity for Channel 13 sensor. Tighten the connector at the DAQ port.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101302,
+    "issue":"Analog Input Ch 13: Signal clipping at max range",
+    "solution":"Input voltage exceeds ±10V range. Check sensor sensitivity or gain settings for Channel 13.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101303,
+    "issue":"Analog Input Ch 13: High noise floor detected",
+    "solution":"Inspect shield grounding for Channel 13. Ensure cable is not running near high-voltage lines.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101304,
+    "issue":"Analog Input Ch 13: Bias voltage out of spec (IEPE)",
+    "solution":"Sensor open circuit or internal constant current source fault on Channel 13. Replace sensor.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101305,
+    "issue":"Analog Input Ch 13: Cross-talk from adjacent channel",
+    "solution":"Isolate the signal cable for Channel 13. Check for shared ground loops with adjacent channels.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101401,
+    "issue":"Analog Input Ch 14: Signal lost or static at 0V",
+    "solution":"Check cable continuity for Channel 14 sensor. Tighten the connector at the DAQ port.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101402,
+    "issue":"Analog Input Ch 14: Signal clipping at max range",
+    "solution":"Input voltage exceeds ±10V range. Check sensor sensitivity or gain settings for Channel 14.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101403,
+    "issue":"Analog Input Ch 14: High noise floor detected",
+    "solution":"Inspect shield grounding for Channel 14. Ensure cable is not running near high-voltage lines.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101404,
+    "issue":"Analog Input Ch 14: Bias voltage out of spec (IEPE)",
+    "solution":"Sensor open circuit or internal constant current source fault on Channel 14. Replace sensor.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101405,
+    "issue":"Analog Input Ch 14: Cross-talk from adjacent channel",
+    "solution":"Isolate the signal cable for Channel 14. Check for shared ground loops with adjacent channels.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101501,
+    "issue":"Analog Input Ch 15: Signal lost or static at 0V",
+    "solution":"Check cable continuity for Channel 15 sensor. Tighten the connector at the DAQ port.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101502,
+    "issue":"Analog Input Ch 15: Signal clipping at max range",
+    "solution":"Input voltage exceeds ±10V range. Check sensor sensitivity or gain settings for Channel 15.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101503,
+    "issue":"Analog Input Ch 15: High noise floor detected",
+    "solution":"Inspect shield grounding for Channel 15. Ensure cable is not running near high-voltage lines.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101504,
+    "issue":"Analog Input Ch 15: Bias voltage out of spec (IEPE)",
+    "solution":"Sensor open circuit or internal constant current source fault on Channel 15. Replace sensor.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101505,
+    "issue":"Analog Input Ch 15: Cross-talk from adjacent channel",
+    "solution":"Isolate the signal cable for Channel 15. Check for shared ground loops with adjacent channels.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101601,
+    "issue":"Analog Input Ch 16: Signal lost or static at 0V",
+    "solution":"Check cable continuity for Channel 16 sensor. Tighten the connector at the DAQ port.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101602,
+    "issue":"Analog Input Ch 16: Signal clipping at max range",
+    "solution":"Input voltage exceeds ±10V range. Check sensor sensitivity or gain settings for Channel 16.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101603,
+    "issue":"Analog Input Ch 16: High noise floor detected",
+    "solution":"Inspect shield grounding for Channel 16. Ensure cable is not running near high-voltage lines.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101604,
+    "issue":"Analog Input Ch 16: Bias voltage out of spec (IEPE)",
+    "solution":"Sensor open circuit or internal constant current source fault on Channel 16. Replace sensor.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":101605,
+    "issue":"Analog Input Ch 16: Cross-talk from adjacent channel",
+    "solution":"Isolate the signal cable for Channel 16. Check for shared ground loops with adjacent channels.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":200101,
+    "issue":"Temp Sensor Ch 1: Open circuit\/broken wire",
+    "solution":"Check for broken wire in PT100\/RTD cable. Verify terminal tightness on Channel 1.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":200102,
+    "issue":"Temp Sensor Ch 1: Short circuit detected",
+    "solution":"Temperature reading stuck at max value. Inspect cable insulation for damage on Channel 1.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":200103,
+    "issue":"Temp Sensor Ch 1: Value drifting unexpectedly",
+    "solution":"Check for moisture in the sensor head or loose connection on Channel 1.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":200201,
+    "issue":"Temp Sensor Ch 2: Open circuit\/broken wire",
+    "solution":"Check for broken wire in PT100\/RTD cable. Verify terminal tightness on Channel 2.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":200202,
+    "issue":"Temp Sensor Ch 2: Short circuit detected",
+    "solution":"Temperature reading stuck at max value. Inspect cable insulation for damage on Channel 2.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":200203,
+    "issue":"Temp Sensor Ch 2: Value drifting unexpectedly",
+    "solution":"Check for moisture in the sensor head or loose connection on Channel 2.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":200301,
+    "issue":"Temp Sensor Ch 3: Open circuit\/broken wire",
+    "solution":"Check for broken wire in PT100\/RTD cable. Verify terminal tightness on Channel 3.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":200302,
+    "issue":"Temp Sensor Ch 3: Short circuit detected",
+    "solution":"Temperature reading stuck at max value. Inspect cable insulation for damage on Channel 3.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":200303,
+    "issue":"Temp Sensor Ch 3: Value drifting unexpectedly",
+    "solution":"Check for moisture in the sensor head or loose connection on Channel 3.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":200401,
+    "issue":"Temp Sensor Ch 4: Open circuit\/broken wire",
+    "solution":"Check for broken wire in PT100\/RTD cable. Verify terminal tightness on Channel 4.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":200402,
+    "issue":"Temp Sensor Ch 4: Short circuit detected",
+    "solution":"Temperature reading stuck at max value. Inspect cable insulation for damage on Channel 4.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":200403,
+    "issue":"Temp Sensor Ch 4: Value drifting unexpectedly",
+    "solution":"Check for moisture in the sensor head or loose connection on Channel 4.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300101,
+    "issue":"Digital Input 01: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 01 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300102,
+    "issue":"Digital Input 01: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 01. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300103,
+    "issue":"Digital Input 01: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 01 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300201,
+    "issue":"Digital Input 02: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 02 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300202,
+    "issue":"Digital Input 02: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 02. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300203,
+    "issue":"Digital Input 02: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 02 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300301,
+    "issue":"Digital Input 03: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 03 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300302,
+    "issue":"Digital Input 03: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 03. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300303,
+    "issue":"Digital Input 03: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 03 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300401,
+    "issue":"Digital Input 04: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 04 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300402,
+    "issue":"Digital Input 04: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 04. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300403,
+    "issue":"Digital Input 04: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 04 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300501,
+    "issue":"Digital Input 05: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 05 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300502,
+    "issue":"Digital Input 05: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 05. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300503,
+    "issue":"Digital Input 05: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 05 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300601,
+    "issue":"Digital Input 06: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 06 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300602,
+    "issue":"Digital Input 06: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 06. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300603,
+    "issue":"Digital Input 06: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 06 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300701,
+    "issue":"Digital Input 07: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 07 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300702,
+    "issue":"Digital Input 07: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 07. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300703,
+    "issue":"Digital Input 07: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 07 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300801,
+    "issue":"Digital Input 08: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 08 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300802,
+    "issue":"Digital Input 08: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 08. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300803,
+    "issue":"Digital Input 08: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 08 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300901,
+    "issue":"Digital Input 09: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 09 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300902,
+    "issue":"Digital Input 09: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 09. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":300903,
+    "issue":"Digital Input 09: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 09 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301001,
+    "issue":"Digital Input 10: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 10 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301002,
+    "issue":"Digital Input 10: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 10. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301003,
+    "issue":"Digital Input 10: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 10 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301101,
+    "issue":"Digital Input 11: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 11 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301102,
+    "issue":"Digital Input 11: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 11. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301103,
+    "issue":"Digital Input 11: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 11 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301201,
+    "issue":"Digital Input 12: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 12 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301202,
+    "issue":"Digital Input 12: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 12. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301203,
+    "issue":"Digital Input 12: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 12 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301301,
+    "issue":"Digital Input 13: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 13 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301302,
+    "issue":"Digital Input 13: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 13. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301303,
+    "issue":"Digital Input 13: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 13 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301401,
+    "issue":"Digital Input 14: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 14 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301402,
+    "issue":"Digital Input 14: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 14. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301403,
+    "issue":"Digital Input 14: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 14 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301501,
+    "issue":"Digital Input 15: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 15 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301502,
+    "issue":"Digital Input 15: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 15. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301503,
+    "issue":"Digital Input 15: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 15 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301601,
+    "issue":"Digital Input 16: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 16 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301602,
+    "issue":"Digital Input 16: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 16. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301603,
+    "issue":"Digital Input 16: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 16 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301701,
+    "issue":"Digital Input 17: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 17 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301702,
+    "issue":"Digital Input 17: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 17. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301703,
+    "issue":"Digital Input 17: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 17 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301801,
+    "issue":"Digital Input 18: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 18 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301802,
+    "issue":"Digital Input 18: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 18. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301803,
+    "issue":"Digital Input 18: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 18 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301901,
+    "issue":"Digital Input 19: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 19 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301902,
+    "issue":"Digital Input 19: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 19. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":301903,
+    "issue":"Digital Input 19: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 19 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302001,
+    "issue":"Digital Input 20: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 20 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302002,
+    "issue":"Digital Input 20: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 20. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302003,
+    "issue":"Digital Input 20: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 20 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302101,
+    "issue":"Digital Input 21: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 21 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302102,
+    "issue":"Digital Input 21: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 21. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302103,
+    "issue":"Digital Input 21: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 21 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302201,
+    "issue":"Digital Input 22: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 22 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302202,
+    "issue":"Digital Input 22: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 22. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302203,
+    "issue":"Digital Input 22: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 22 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302301,
+    "issue":"Digital Input 23: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 23 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302302,
+    "issue":"Digital Input 23: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 23. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302303,
+    "issue":"Digital Input 23: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 23 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302401,
+    "issue":"Digital Input 24: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 24 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302402,
+    "issue":"Digital Input 24: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 24. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302403,
+    "issue":"Digital Input 24: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 24 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302501,
+    "issue":"Digital Input 25: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 25 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302502,
+    "issue":"Digital Input 25: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 25. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302503,
+    "issue":"Digital Input 25: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 25 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302601,
+    "issue":"Digital Input 26: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 26 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302602,
+    "issue":"Digital Input 26: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 26. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302603,
+    "issue":"Digital Input 26: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 26 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302701,
+    "issue":"Digital Input 27: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 27 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302702,
+    "issue":"Digital Input 27: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 27. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302703,
+    "issue":"Digital Input 27: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 27 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302801,
+    "issue":"Digital Input 28: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 28 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302802,
+    "issue":"Digital Input 28: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 28. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302803,
+    "issue":"Digital Input 28: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 28 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302901,
+    "issue":"Digital Input 29: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 29 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302902,
+    "issue":"Digital Input 29: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 29. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":302903,
+    "issue":"Digital Input 29: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 29 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":303001,
+    "issue":"Digital Input 30: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 30 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":303002,
+    "issue":"Digital Input 30: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 30. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":303003,
+    "issue":"Digital Input 30: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 30 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":303101,
+    "issue":"Digital Input 31: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 31 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":303102,
+    "issue":"Digital Input 31: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 31. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":303103,
+    "issue":"Digital Input 31: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 31 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":303201,
+    "issue":"Digital Input 32: Stuck High (Logic 1)",
+    "solution":"Check if the limit switch or sensor connected to DI 32 is jammed closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":303202,
+    "issue":"Digital Input 32: Stuck Low (Logic 0)",
+    "solution":"Check for broken wire or failed sensor on DI 32. Ensure 24V is present.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":303203,
+    "issue":"Digital Input 32: Rapid toggling (Bounce)",
+    "solution":"Increase the software debounce time for DI 32 or check for loose wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":401001,
+    "issue":"CAN Bus 1: Bus Off State",
+    "solution":"Too many error frames detected. Check termination resistors (120Ω) on both ends of CAN 1.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":401002,
+    "issue":"CAN Bus 1: Error Passive State",
+    "solution":"Device is receiving errors but not disrupting traffic. Check for baud rate mismatch on CAN 1.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":401003,
+    "issue":"CAN Bus 1: Stuff Error",
+    "solution":"Signal integrity issue. Use twisted pair shielded cable for CAN 1 wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":402001,
+    "issue":"CAN Bus 2: Bus Off State",
+    "solution":"Too many error frames detected. Check termination resistors (120Ω) on both ends of CAN 2.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":402002,
+    "issue":"CAN Bus 2: Error Passive State",
+    "solution":"Device is receiving errors but not disrupting traffic. Check for baud rate mismatch on CAN 2.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":402003,
+    "issue":"CAN Bus 2: Stuff Error",
+    "solution":"Signal integrity issue. Use twisted pair shielded cable for CAN 2 wiring.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":403001,
+    "issue":"Ethernet Port 1: Link Down",
+    "solution":"Cable disconnected or switch port dead. Try replacing the CAT6 cable on LAN 1.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":403002,
+    "issue":"Ethernet Port 1: Speed Mismatch (10\/100 vs 1000)",
+    "solution":"Force the correct link speed in OS settings or check switch auto-negotiation.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":404001,
+    "issue":"Ethernet Port 2: Link Down",
+    "solution":"Cable disconnected or switch port dead. Try replacing the CAT6 cable on LAN 2.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":404002,
+    "issue":"Ethernet Port 2: Speed Mismatch (10\/100 vs 1000)",
+    "solution":"Force the correct link speed in OS settings or check switch auto-negotiation.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":405001,
+    "issue":"Wi-Fi: Authentication Failed",
+    "solution":"Incorrect WPA2 password. Update `wpa_supplicant.conf` with valid credentials.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":405002,
+    "issue":"Wi-Fi: IP Address Conflict",
+    "solution":"Static IP assigned to Wi-Fi adapter is already in use. Switch to DHCP.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":500101,
+    "issue":"System: CPU Temperature Critical (>95°C)",
+    "solution":"Thermal throttling active. Check fan operation and clean heatsink vents.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":500102,
+    "issue":"System: RAM Allocation Failure",
+    "solution":"Available memory low. Stop non-essential Docker containers or upgrade RAM.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":500201,
+    "issue":"Storage: SATA Drive Mount Failed",
+    "solution":"Check SATA power and data cables. Verify filesystem integrity (fsck).",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":500202,
+    "issue":"Storage: M.2 NVMe Not Detected",
+    "solution":"Reseat the M.2 drive in the slot. Check BIOS settings for PCIe configuration.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":500301,
+    "issue":"Power: Input Voltage Low (<18V)",
+    "solution":"24V PSU is sagging under load. Check PSU rating and wire gauge.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":500302,
+    "issue":"Power: Input Voltage High (>30V)",
+    "solution":"Overvoltage protection active. Regulate the DC supply to 24V.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":600101,
+    "issue":"Tachometer: No Pulse Detected",
+    "solution":"Check reflective tape alignment or proximity sensor gap.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":600102,
+    "issue":"Tachometer: RPM Reading Unstable",
+    "solution":"Ensure the tachometer cable is shielded. Check for vibrations affecting sensor mount.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":700101,
+    "issue":"Analog Output 1: Open Loop",
+    "solution":"Check wiring to the receiving PLC\/Drive. Ensure the loop is closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":700102,
+    "issue":"Analog Output 1: Voltage Drop",
+    "solution":"Load impedance too low for voltage output. Check spec compliance.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":700201,
+    "issue":"Analog Output 2: Open Loop",
+    "solution":"Check wiring to the receiving PLC\/Drive. Ensure the loop is closed.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":700202,
+    "issue":"Analog Output 2: Voltage Drop",
+    "solution":"Load impedance too low for voltage output. Check spec compliance.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":800101,
+    "issue":"AI Model: Inference Timeout",
+    "solution":"Model taking too long to process. Reduce input batch size or simplify model.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":800102,
+    "issue":"AI Model: Checksum Mismatch",
+    "solution":"Model file corrupted. Re-upload the .tflite or .onnx file.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":900101,
+    "issue":"Web Dashboard: WebSocket Disconnected",
+    "solution":"Network latency too high. Refresh the page or check LAN connection.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":900102,
+    "issue":"Web Dashboard: Backend API 500 Error",
+    "solution":"Server internal error. Check application logs for stack trace.",
+    "device":"intellipod"
+  },
+  {
+    "issue_number":10501,
+    "issue":"Vibration sensor X-axis signal lost, value static at 0",
+    "solution":"Check the cable continuity for the X-axis accelerometer. Tighten the connector at the DAQ port.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":10502,
+    "issue":"Vibration sensor Y-axis readings showing high noise floor",
+    "solution":"Inspect the sensor mounting for looseness. Ensure the shield wire is properly grounded to the machine chassis.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":10503,
+    "issue":"Z-axis accelerometer data clipping at maximum range",
+    "solution":"The machine vibration exceeds the sensor's g-range. Verify if the correct sensor sensitivity is configured in settings.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":20104,
+    "issue":"PT100 temperature sensor 1 showing negative value or open circuit",
+    "solution":"Check for a broken wire in the RTD cable or loose terminal block connection on the TMM module.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":20105,
+    "issue":"Temperature sensor 2 reading stuck at 850°C (Max Scale)",
+    "solution":"Possible short circuit in the sensor wires. Inspect the cable insulation for damage.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":20106,
+    "issue":"Hall effect current sensor giving non-zero reading when machine is off",
+    "solution":"Perform a zero-calibration in the software settings. Check for magnetic interference near the sensor.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":30201,
+    "issue":"DAQ ADC initialization failed on startup",
+    "solution":"Power cycle the device. If the issue persists, the ADC chip may be damaged.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":30202,
+    "issue":"Sampling rate mismatch detected",
+    "solution":"The configured sampling rate (e.g., 20kHz) is not supported by the current active channel count. Lower the sampling rate.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":30203,
+    "issue":"Buffer overflow - Data acquisition speed exceeds processing speed",
+    "solution":"Reduce the number of active channels or increase the buffer size in the configuration file.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":30204,
+    "issue":"FFT calculation error: Time domain data corrupted",
+    "solution":"Check for intermittent signal loss during the sampling window. Restart the edge processing service.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":40401,
+    "issue":"Wi-Fi module initialized but unable to obtain IP address",
+    "solution":"Check the DHCP server settings on the router. Verify the Wi-Fi password in the `wifi_config.json` file.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":40402,
+    "issue":"Ethernet link down despite cable connected",
+    "solution":"Try a different Ethernet cable. Ensure the switch port is active and not disabled.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":40403,
+    "issue":"MQTT Broker connection timeout",
+    "solution":"Ping the broker URL from the device. Check firewall rules allowing traffic on port 1883\/8883.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":40404,
+    "issue":"Cloud sync failed: Authentication token expired",
+    "solution":"Regenerate the device token from the cloud dashboard and update it in the device settings.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":40405,
+    "issue":"Gateway reachable but no internet access",
+    "solution":"Check the DNS settings. Ensure the gateway has a valid WAN connection.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":50101,
+    "issue":"System low voltage warning detected (<22V)",
+    "solution":"Check the 24V DC power supply unit. Ensure the wiring gauge is sufficient for the distance.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":50102,
+    "issue":"Device CPU temperature critically high (>80°C)",
+    "solution":"Ensure the electrical cabinet fan is working. Check if the device heatsink is covered by dust.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":50103,
+    "issue":"SD Card write protection error",
+    "solution":"Eject the SD card and unlock the physical write-protect switch. Reinsert and reboot.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":50104,
+    "issue":"Local storage full: Unable to save CSV logs",
+    "solution":"Delete old log files or enable 'Auto-delete oldest' in the storage settings.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":60001,
+    "issue":"Modbus RS485 communication timeout with Energy Meter",
+    "solution":"Check the twisted pair wiring (A\/B). Verify Baud rate and Slave ID match the meter configuration.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":60002,
+    "issue":"CRC error on Energy Meter data packet",
+    "solution":"Check for electrical noise on the RS485 line. Install a termination resistor (120Ω) if the cable is long.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":70101,
+    "issue":"Software service 'mtcm-core' stopped unexpectedly",
+    "solution":"Check the system logs (`\/var\/log\/syslog`) for the crash reason. Restart the service manually.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":70102,
+    "issue":"Config file parsing error: invalid JSON format",
+    "solution":"Restore the default configuration file or use a JSON validator to fix syntax errors.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":70103,
+    "issue":"Firmware update failed: Checksum mismatch",
+    "solution":"Download the firmware file again. Ensure the connection is stable during upload.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":70104,
+    "issue":"Web dashboard not loading: Port 80\/8080 busy",
+    "solution":"Another application might be using the port. Change the web server port in settings and restart.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":80901,
+    "issue":"RPM sensor pulse not detected",
+    "solution":"Adjust the proximity sensor gap. Clean the reflective tape if using an optical sensor.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":80902,
+    "issue":"Spindle load threshold exceeded constantly",
+    "solution":"Check if the threshold value is set too low for the current cutting process. Recalibrate the baseline.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":10504,
+    "issue":"Vibration sensor cable impedance too high",
+    "solution":"Possible corrosion on the connector pins. Clean with contact cleaner or replace the cable.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":20107,
+    "issue":"Ambient temperature sensor failure",
+    "solution":"The internal board sensor is malfunctioning. This may require a board replacement.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":30205,
+    "issue":"Trigger signal not received for data capture",
+    "solution":"Check the digital input (DI) wiring from the machine CNC controller (Cycle Start signal).",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":30206,
+    "issue":"IEPE sensor power supply fault",
+    "solution":"The internal constant current source (4mA) is not working. Check if the sensor requires external power.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":40406,
+    "issue":"4G\/LTE Module SIM card not detected",
+    "solution":"Power off, remove the SIM card, clean the contacts, and reinsert it firmly.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":40407,
+    "issue":"Weak Wi-Fi signal strength (RSSI < -80dBm)",
+    "solution":"Install an external Wi-Fi antenna or move the device closer to the access point.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":50105,
+    "issue":"RTC (Real Time Clock) battery low, time lost on reboot",
+    "solution":"Replace the CR2032 coin cell battery on the mainboard to retain system time.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":50106,
+    "issue":"USB Drive not recognized for data export",
+    "solution":"Format the USB drive to FAT32. NTFS is often not supported by embedded Linux devices.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":60003,
+    "issue":"Energy meter Voltage phase sequence error",
+    "solution":"Swap the L1 and L3 voltage sensing wires to correct the phase rotation.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":60004,
+    "issue":"Power factor reading is NaN or invalid",
+    "solution":"Current flow is too low to calculate Power Factor. Ensure the machine is under load.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":70105,
+    "issue":"Database lock file error",
+    "solution":"The internal SQLite database is locked. Reboot the device to clear the lock file.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":70106,
+    "issue":"Edge analytics engine unresponsive",
+    "solution":"The processing thread is hung. Restart the device. If frequent, check CPU usage statistics.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":80903,
+    "issue":"Chatter detection false positive",
+    "solution":"Increase the chatter threshold. Review the frequency band settings for the specific tool.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":80904,
+    "issue":"Machine status 'Idle' despite vibration present",
+    "solution":"Adjust the 'Machine On' vibration threshold. It is currently set higher than the idle vibration.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":10505,
+    "issue":"Cross-talk detected between Channel 1 and Channel 2",
+    "solution":"Separate the signal cables. Ensure analog cables are not running parallel to high-voltage power lines.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":20108,
+    "issue":"Coolant temperature sensor fluctuating rapidly",
+    "solution":"Check for loose wiring or moisture ingress in the sensor connector.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":30207,
+    "issue":"ADC reference voltage unstable",
+    "solution":"Power supply ripple is too high. Use a regulated UPS or noise filter for the power input.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":40408,
+    "issue":"Device IP conflict detected on network",
+    "solution":"Another device has the same static IP. Change the device IP or switch to DHCP.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":40409,
+    "issue":"SSH access denied",
+    "solution":"Verify the SSH keys or password. Ensure SSH is enabled in the admin panel.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":50107,
+    "issue":"LED status indicators not working",
+    "solution":"Check the ribbon cable connecting the LED panel to the mainboard.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":60005,
+    "issue":"Modbus Exception Code 02 (Illegal Data Address)",
+    "solution":"The requested register address does not exist in the Energy Meter map. Update the Modbus map.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":70107,
+    "issue":"License key invalid or expired",
+    "solution":"Contact support to renew the license. Upload the new `license.key` file.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":80905,
+    "issue":"Tool wear index calculation failed",
+    "solution":"Insufficient historical data to calculate wear. Run the machine for at least 10 cycles to build a baseline.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":90001,
+    "issue":"Analog Output 4-20mA loop open",
+    "solution":"Check the wiring to the PLC analog input. Ensure the loop is powered.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":90002,
+    "issue":"Digital Output relay stuck closed",
+    "solution":"Tap the relay lightly. If it remains stuck, the relay contact might be welded; replace the module.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":10506,
+    "issue":"Accelerometer bias voltage out of spec",
+    "solution":"The sensor might be damaged due to shock\/drop. Replace the accelerometer.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":20109,
+    "issue":"Temperature hysteresis loop error",
+    "solution":"The software debounce setting for the alarm is too high. Lower the hysteresis value.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":30208,
+    "issue":"Data packet loss during high-speed streaming",
+    "solution":"Network bandwidth is insufficient. Switch from Wi-Fi to Ethernet or reduce the data rate.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":40410,
+    "issue":"NTP time sync failed",
+    "solution":"The device cannot reach the time server. Check internet access or specify a local NTP server IP.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":50108,
+    "issue":"Watchdog timer reset occurred",
+    "solution":"The system was unresponsive and rebooted automatically. Monitor for recurring freeze patterns.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":60006,
+    "issue":"Energy consumption spike detected (Surge)",
+    "solution":"Check the machine for mechanical jamming or motor stalling events.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":70108,
+    "issue":"User login failed: Max attempts exceeded",
+    "solution":"Wait for 15 minutes for the lockout to clear or reset the admin password using the physical reset button.",
+    "device":"mtcm-edge"
+  },
+  {
+    "issue_number":80906,
+    "issue":"Anomaly score 100% (Critical Failure Imminent)",
+    "solution":"Immediate inspection required. Vibration levels are significantly above the trained model's safe zone.",
+    "device":"mtcm-edge"
+  }
+]
